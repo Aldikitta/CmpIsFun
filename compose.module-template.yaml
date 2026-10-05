@@ -1,0 +1,7 @@
+dependencies:
+  - $libs.icons.extended
+
+settings:
+  compose:
+    version: 1.12.1
+    enabled: true

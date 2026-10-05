@@ -4,9 +4,11 @@ product:
 
 apply:
   - //android.module-template.yaml
+  - //compose.module-template.yaml
+  - //koin.module-template.yaml
 
 dependencies:
-  - //core
+  - //core/designSystem
   - $compose.runtime
   - $compose.foundation
   - $compose.material3
@@ -14,14 +16,9 @@ dependencies:
   - $compose.components.resources
   - $compose.preview
   - $compose.hotReload.runtimeApi
+  - //core/resources
+  - //architecture-layer/presentation-layer/dashboard
+  - //core/navigation
 
 dependencies@android:
   - $compose.uiTooling
-
-settings:
-  compose:
-    enabled: true
-    resources:
-      packageName: com.kotlintoolchain.aldikitta.resources
-      # Generate public accessors so other modules (and previews) can use Res.*
-      exposedAccessors: true

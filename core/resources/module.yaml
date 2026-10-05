@@ -1,0 +1,17 @@
+product:
+  type: kmp/lib
+  platforms: [jvm, android, iosArm64, iosSimulatorArm64, wasmJs]
+
+apply:
+  - //compose.module-template.yaml
+
+dependencies:
+  - $compose.ui
+  - $compose.foundation
+
+settings:
+  compose:
+    resources:
+      packageName: com.kotlintoolchain.aldikitta.resources
+      # Generate public accessors so other modules (and previews) can use Res.*
+      exposedAccessors: true

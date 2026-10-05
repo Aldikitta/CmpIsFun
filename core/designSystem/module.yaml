@@ -1,0 +1,11 @@
+product:
+  type: kmp/lib
+  platforms: [ jvm, android, iosArm64, iosSimulatorArm64, wasmJs ]
+
+apply:
+  - //koin.module-template.yaml
+  - //compose.module-template.yaml
+
+dependencies:
+  - //core/resources
+  - $compose.material3

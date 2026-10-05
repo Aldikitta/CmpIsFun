@@ -1,51 +1,34 @@
 package com.kotlintoolchain.aldikitta
 
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.safeContentPadding
-import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
-import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import org.jetbrains.compose.reload.DevelopmentEntryPoint
-import org.jetbrains.compose.resources.painterResource
-
-import com.kotlintoolchain.aldikitta.resources.Res
-import com.kotlintoolchain.aldikitta.resources.compose_multiplatform
+import androidx.compose.runtime.Composable
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.rememberNavController
+import com.kotlintoolchain.aldikitta.navigation.dashboardGraph
+import com.kotlintoolchain.aldikitta.screen.CmpIsFunScreenViewModel
+import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
-@Preview
-@DevelopmentEntryPoint
 fun App() {
     MaterialTheme {
-        var showContent by remember { mutableStateOf(false) }
-        Column(
-            modifier = Modifier
-                .background(MaterialTheme.colorScheme.primaryContainer)
-                .safeContentPadding()
-                .fillMaxSize(),
-            horizontalAlignment = Alignment.CenterHorizontally,
+        val navController: NavHostController = rememberNavController()
+        val viewModel = koinViewModel<CmpIsFunScreenViewModel>()
+        NavHost(
+            navController = navController,
+            startDestination = DashboardNavGraph
         ) {
-            Button(onClick = { showContent = !showContent }) {
-                Text("Click me!")
-            }
-            AnimatedVisibility(showContent) {
-                val greeting = remember { Greeting().greet() }
-                Column(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                ) {
-                    Image(painterResource(Res.drawable.compose_multiplatform), null)
-                    Text("Compose: $greeting")
+            dashboardGraph(
+                screenViewModel = viewModel,
+                navigateToMovie = {
+//                        navController.navigateToMovieNavGraph()
+                },
+                navigateToEcommerce = {
+
+                },
+                navigateToCmpPlayground = {
                 }
-            }
+            )
         }
     }
 }

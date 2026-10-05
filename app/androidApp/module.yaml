@@ -2,6 +2,7 @@ product: android/app
 
 apply:
   - //android.module-template.yaml
+  - //compose.module-template.yaml
 
 dependencies:
   - //app/shared
@@ -9,7 +10,6 @@ dependencies:
   - $compose.uiTooling
 
 settings:
-  compose: enabled
   android:
     namespace: com.kotlintoolchain.aldikitta
     applicationId: com.kotlintoolchain.aldikitta

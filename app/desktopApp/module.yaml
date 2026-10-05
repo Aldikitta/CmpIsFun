@@ -1,5 +1,8 @@
 product: jvm/app
 
+apply:
+  - //compose.module-template.yaml
+
 dependencies:
   - //app/shared
   - $compose.desktop.currentOs
@@ -8,6 +11,5 @@ dependencies:
   - $libs.logback.classic
 
 settings:
-  compose: enabled
   jvm:
     mainClass: com.kotlintoolchain.aldikitta.MainKt

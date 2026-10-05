@@ -1,8 +1,8 @@
 product: ios/app
 
+apply:
+  - //compose.module-template.yaml
+
 dependencies:
   - //app/shared
   - $compose.ui
-
-settings:
-  compose: enabled
