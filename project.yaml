@@ -1,12 +1,8 @@
 modules:
-  - apps/android-app
-  - apps/ios-app
-  - apps/jvm-app
-  - apps/shared
-  - architecture-layer/data-layer/movie-data
-  - architecture-layer/domain-layer/movie-domain
-  - architecture-layer/presentation-layer/dashboard
-  - base/navigation
-  - architecture-layer/presentation-layer/movie
-  - base/design-system
-  - base/resources
+  - app/androidApp
+  - app/desktopApp
+  - app/iosApp
+  - app/shared
+  - app/webApp
+  - core
+  - server

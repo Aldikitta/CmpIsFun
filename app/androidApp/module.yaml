@@ -1,0 +1,15 @@
+product: android/app
+
+apply:
+  - //android.module-template.yaml
+
+dependencies:
+  - //app/shared
+  - $compose.preview
+  - $compose.uiTooling
+
+settings:
+  compose: enabled
+  android:
+    namespace: com.kotlintoolchain.aldikitta
+    applicationId: com.kotlintoolchain.aldikitta

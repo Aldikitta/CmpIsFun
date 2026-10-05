@@ -1,9 +1,0 @@
-product:
-  type: lib
-  platforms: [jvm, android, iosArm64, iosSimulatorArm64, iosX64]
-
-apply:
-  - ../../../koin.module-template.yaml
-
-dependencies:
-  - ../../domain-layer/movie-domain

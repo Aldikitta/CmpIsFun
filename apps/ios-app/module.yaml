@@ -1,8 +1,0 @@
-product:
-  type: ios/app
-
-apply:
-  - ../../jetbrains.module-template.yaml
-
-dependencies:
-  - ../shared
