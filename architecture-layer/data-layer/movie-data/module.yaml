@@ -4,6 +4,7 @@ product:
 
 apply:
   - //koin.module-template.yaml
+  - //kotlin.module-template.yaml
 
 dependencies:
   - //architecture-layer/domain-layer/movie-domain

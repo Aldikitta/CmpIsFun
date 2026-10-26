@@ -5,6 +5,7 @@ product:
 apply:
   - //koin.module-template.yaml
   - //compose.module-template.yaml
+  - //kotlin.module-template.yaml
 
 dependencies:
   - //core/resources

@@ -3,6 +3,7 @@ product: android/app
 apply:
   - //android.module-template.yaml
   - //compose.module-template.yaml
+  - //kotlin.module-template.yaml
 
 dependencies:
   - //app/shared

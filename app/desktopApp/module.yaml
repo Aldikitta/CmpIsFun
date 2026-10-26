@@ -2,6 +2,7 @@ product: jvm/app
 
 apply:
   - //compose.module-template.yaml
+  - //kotlin.module-template.yaml
 
 dependencies:
   - //app/shared

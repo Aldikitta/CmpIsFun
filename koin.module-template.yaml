@@ -4,13 +4,14 @@ dependencies:
   - $libs.koin.compose.viewmodel.navigation
   - $libs.koin.annotations
 
+#settings:
+#  kotlin:
+#    compilerPlugins:
+#      - id: io.insert-koin.compiler
+#        dependency: io.insert-koin.compiler.plugin:1.2.1
+
 settings:
   kotlin:
-    ksp:
-      processors:
-        - $libs.koin.ksp.compiler
-      processorOptions:
-        KOIN_USE_COMPOSE_VIEWMODEL: "true"
-        KOIN_CONFIG_CHECK: "true"
-        KOIN_DEFAULT_MODULE: "true"
-        koin.generate: all
+    compilerPlugins:
+      - id: io.insert-koin.compiler.plugin
+        dependency: io.insert-koin:koin-compiler-plugin:1.2.1

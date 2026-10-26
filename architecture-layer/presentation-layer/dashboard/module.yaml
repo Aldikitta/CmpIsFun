@@ -5,6 +5,7 @@ product:
 apply:
   - //compose.module-template.yaml
   - //koin.module-template.yaml
+  - //kotlin.module-template.yaml
 
 dependencies:
   - //core/navigation
